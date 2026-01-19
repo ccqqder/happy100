@@ -1820,7 +1820,7 @@
                     const excelCredited = parseFloat(row[6]) || 0;
 
                     // A valid transaction row has customer name (not '總計') and has some amount data
-                    const hasAmountData = amount > 0 || selfAmount > 0 || companyAmount > 0 || excelCredited > 0;
+                    const hasAmountData = amount !== 0 || selfAmount !== 0 || companyAmount !== 0 || excelCredited !== 0;
 
                     if (customerName && customerName !== '總計' && hasAmountData && dateCell) {
                         // Parse date (Excel serial number or string)
